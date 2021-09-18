@@ -5,16 +5,15 @@ int main() {
   printf("Insira os numeros: \n"); 
 
   int perfeito1; // declaração entrada 1
-  scanf("%d",&perfeito1); /* entrada padrão c*/
-  int perfeito2;  /* declaração entrada 2*/
+  scanf("%d",&perfeito1); // entrada padrão 
+  int perfeito2;  // declaração entrada 2
   scanf("%d",&perfeito2); 
 
-  int flag1=0; /* declaração variáveis de armazenamento
+  int flag1=0; // declaração variáveis de armazenamento
   int flag2=0;
-
-  for(int i=1; i<perfeito1; i++){ /* loop para contagem de divisores*/
+  for(int i=1; i<perfeito1; i++){ // loop para contagem de divisores
     if(perfeito1%i==0){
-			flag1+=i; /* armazenamento de divisores*/
+			flag1+=i; // armazenamento de divisores
 		}
   }
 
@@ -23,9 +22,19 @@ int main() {
 			flag2+=z;
 		}
 	}
-  if(perfeito1==flag1 && perfeito2==flag2){ /* comparação entre os numeros inseridos na entrada com as variáveis de armazenamento*/
-    printf("Sao divisores perfeitos\n");
-  }
-  else
-    printf("Nao sao divisores perfeitos\n");
+  if(perfeito1==flag1 && perfeito2==flag2){ // checagem para saber se ambos são divisores perfeitos
+		printf("Sao divisores perfeitos\n");
+	}
+	
+	else if(perfeito1==flag1 && perfeito2!=flag2){ // checagem para saber se o primeiro número é perfeito
+		printf("Apenas o %d",perfeito1);
+    printf(" e perfeito\n");
+	}
+	
+	else if(perfeito1!=flag1 && perfeito2==flag2){ // checagem para saber se o segundo número é perfeito
+		printf("Apenas o %d",perfeito2);
+    printf(" e perfeito\n");
+	}
+	else  // caso nenhum seja perfeito
+		printf("Nao sao divisores perfeitos\n");
 }
