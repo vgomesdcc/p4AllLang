@@ -28,11 +28,18 @@ class Program {
     }
 
     // exibição do resultado (SAÍDA)
-    if(perfeito1==flag1 && perfeito2==flag2){
-      Console.WriteLine("Sao numeros perfeitos!\n");
-    }
-    else{
-      Console.WriteLine("Nao sao numeros perfeitos!\n");
-    }   
+    if(perfeito1==flag1 && perfeito2==flag2){ // checagem para saber se ambos são divisores perfeitos
+	    Console.WriteLine("Ambos sao numeros perfeitos\n");
+	}
+	
+	else if(perfeito1==flag1 && perfeito2!=flag2){ // checagem para saber se o primeiro número é perfeito
+		 Console.WriteLine("Apenas o "+perfeito1+" e um numero perfeito\n");
+	}
+	
+	else if(perfeito1!=flag1 && perfeito2==flag2){ // checagem para saber se o segundo número é perfeito
+		 Console.WriteLine("Apenas o "+perfeito2+" e um numero perfeito\n");
+	}
+	else  // caso nenhum seja perfeito
+		Console.WriteLine("Nao sao divisores perfeitos\n");
   }
 }
