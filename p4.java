@@ -24,7 +24,15 @@ class Main {
     }
 
     if(perfeito1==flag1 && perfeito2==flag2){ //comparação das entradas com suas respectivas variáveis acumuladoras//
-      System.out.println("Sao divisores perfeitos\n");
+      System.out.println("Ambos sao divisores perfeitos\n");
+    }
+
+    else if(perfeito1==flag1 && perfeito2!=flag2){ // checagem para saber se o primeiro número é perfeito
+		System.out.println("Apenas o "+perfeito1+" e perfeito\n");
+	}
+	
+	  else if(perfeito1!=flag1 && perfeito2==flag2){ // checagem para saber se o segundo número é perfeito
+		System.out.println("Apenas o "+perfeito2+" e perfeito\n");
     }
 
     else
